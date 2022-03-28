@@ -7,12 +7,12 @@ const contactConrent = "At vero eos et accusamus et iusto odio dignissimos ducim
 const aboutContent = "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut  consequatur aut perferendis doloribus asperiores repellat.";
 
 const app = express();
-app.set(view-engine,"ejs");
+app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 app.get("/",function(req,res){
-  res.render('home');
+  res.render('home',{content:homeStatingContent});
 });
 
 
